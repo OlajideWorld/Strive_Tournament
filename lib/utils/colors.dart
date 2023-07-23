@@ -11,3 +11,4 @@ const descriptionColor = Color(0xFFBEBEBE);
 const buttonColor = Color(0xFFFE4655);
 const mainBlack = Color(0xFF000000);
 const mainWhite = Color(0xFFFFFFFF);
+const textColor = Color(0xFFF9F9F9);

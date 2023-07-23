@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slider_button/slider_button.dart';
+import 'package:strive/routes/routes.dart';
 
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
@@ -24,7 +25,7 @@ class SplashScreen extends StatelessWidget {
             left: widthSize(0),
             right: widthSize(0),
             child: Opacity(
-              opacity: 0.55,
+              opacity: 0.2,
               child: SizedBox(
                 height: heightSize(542),
                 child: Image.asset("assets/images/onboardimage.png"),
@@ -63,7 +64,7 @@ class SplashScreen extends StatelessWidget {
                     SizedBox(height: heightSize(52)),
                     SliderButton(
                       action: () {
-                        Get.toNamed("");
+                        Get.toNamed(myRoutes.signinScreen);
                       },
 
                       ///Put label over here
