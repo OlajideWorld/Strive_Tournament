@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:strive/utils/colors.dart';
 
@@ -16,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         child: Center(
             child: Container(
           height: heightSize(40),
-          decoration: BoxDecoration(gradient: backgroundColor),
+          decoration: const BoxDecoration(gradient: backgroundColor),
           child: Text(
             "Timothy",
             style: TextStyle(fontFamily: UsedFonts().familyAkira),

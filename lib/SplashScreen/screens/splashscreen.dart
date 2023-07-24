@@ -14,7 +14,6 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         backgroundColor: mainBlack,
@@ -25,7 +24,7 @@ class SplashScreen extends StatelessWidget {
             left: widthSize(0),
             right: widthSize(0),
             child: Opacity(
-              opacity: 0.2,
+              opacity: 0.3,
               child: SizedBox(
                 height: heightSize(542),
                 child: Image.asset("assets/images/onboardimage.png"),

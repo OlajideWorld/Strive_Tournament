@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:strive/SIgn-in%20page/screens/sign_up_page.dart';
 import 'package:strive/common/buttons.dart';
 import 'package:strive/common/textField.dart';
 import 'package:strive/common/textstyle.dart';
@@ -37,7 +39,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 Padding(
                     padding: EdgeInsets.only(
-                      top: heightSize(316),
+                      top: height * 0.45,
                     ),
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: widthSize(16)),
@@ -49,7 +51,7 @@ class SignInScreen extends StatelessWidget {
                             BoxShadow(
                                 color: Colors.black.withOpacity(0.9),
                                 blurRadius: 60,
-                                offset: Offset(0, 1))
+                                offset: const Offset(0, 1))
                           ]),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,6 +82,8 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(22)),
                           const InputTextField(
+                            textColor: textColor,
+                            innerColor: Color(0xFF3E3E3E),
                             text: "Username",
                             hintText: "Enter your username",
                             obscureText: false,
@@ -88,45 +92,40 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(8)),
                           const InputTextField(
+                            textColor: textColor,
+                            innerColor: Color(0xFF3E3E3E),
                             text: "Password",
                             hintText: "*******",
-                            obscureText: false,
+                            obscureText: true,
                             password: false,
                             textInputAction: true,
                           ),
                           SizedBox(height: heightSize(32)),
                           buttonWidget(context, "Login"),
                           SizedBox(height: heightSize(12)),
-                          SizedBox(
-                            height: heightSize(50),
-                            width: widthSize(343),
-                            child: const Text.rich(
-                              TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: 'Don’t have an account? ',
-                                    style: TextStyle(
-                                      color: Color(0xFFF4F4F4),
-                                      fontSize: 16,
-                                      fontFamily: 'Sk-Modernist',
-                                      fontWeight: FontWeight.w400,
-                                      height: 22.40,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: 'Sign Up',
-                                    style: TextStyle(
-                                      color: buttonColor,
-                                      fontSize: 16,
-                                      fontFamily: 'Sk-Modernist',
-                                      fontWeight: FontWeight.w400,
-                                      height: 22.40,
-                                    ),
-                                  ),
-                                ],
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Don’t have an account? ",
+                                style: TextStyle(
+                                    fontSize: fontSize(16),
+                                    fontFamily: UsedFonts().familyModernist,
+                                    fontWeight: FontWeight.w400,
+                                    color: backgroundSecondary),
                               ),
-                              textAlign: TextAlign.center,
-                            ),
+                              GestureDetector(
+                                onTap: () => Get.to(() => const SignUpScreen()),
+                                child: Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                      color: buttonColor,
+                                      fontSize: fontSize(16),
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: UsedFonts().familyModernist),
+                                ),
+                              )
+                            ],
                           )
                         ],
                       ),

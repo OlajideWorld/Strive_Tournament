@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:strive/SIgn-in%20page/screens/sign_in_page.dart';
