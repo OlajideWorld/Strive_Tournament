@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:strive/HomeScreen/screens/homeScreen.dart';
 import 'package:strive/SIgn-in%20page/screens/sign_up_page.dart';
 import 'package:strive/common/buttons.dart';
 import 'package:strive/common/textField.dart';
@@ -82,6 +83,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(22)),
                           const InputTextField(
+                            differentiate: 1,
                             textColor: textColor,
                             innerColor: Color(0xFF3E3E3E),
                             text: "Username",
@@ -92,6 +94,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(8)),
                           const InputTextField(
+                            differentiate: 1,
                             textColor: textColor,
                             innerColor: Color(0xFF3E3E3E),
                             text: "Password",
@@ -101,7 +104,9 @@ class SignInScreen extends StatelessWidget {
                             textInputAction: true,
                           ),
                           SizedBox(height: heightSize(32)),
-                          buttonWidget(context, "Login"),
+                          buttonWidget(context, "Login", () {
+                            Get.to(() => const HomeScreen());
+                          }),
                           SizedBox(height: heightSize(12)),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

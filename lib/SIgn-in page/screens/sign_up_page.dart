@@ -3,6 +3,7 @@ import "package:get/get.dart";
 import "package:strive/common/buttons.dart";
 import "package:strive/common/textstyle.dart";
 
+import "../../HomeScreen/screens/homeScreen.dart";
 import "../../common/textField.dart";
 import "../../utils/colors.dart";
 import "../../utils/sizes.dart";
@@ -68,6 +69,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: heightSize(16)),
                         const InputTextField(
+                          differentiate: 2,
                           textColor: Color(0xFF212121),
                           innerColor: backgroundSecondary,
                           text: "Username",
@@ -78,6 +80,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: heightSize(8)),
                         const InputTextField(
+                          differentiate: 2,
                           textColor: Color(0xFF212121),
                           innerColor: backgroundSecondary,
                           text: "Email",
@@ -88,6 +91,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: heightSize(8)),
                         const InputTextField(
+                          differentiate: 2,
                           textColor: Color(0xFF212121),
                           innerColor: backgroundSecondary,
                           text: "Password",
@@ -97,7 +101,9 @@ class SignUpScreen extends StatelessWidget {
                           textInputAction: true,
                         ),
                         SizedBox(height: heightSize(32)),
-                        buttonWidget(context, "SIGN UP"),
+                        buttonWidget(context, "SIGN UP", () {
+                          Get.to(() => const HomeScreen());
+                        }),
                         SizedBox(height: heightSize(12)),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,

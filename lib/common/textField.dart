@@ -9,6 +9,7 @@ import '../utils/sizes.dart';
 class InputTextField extends StatefulWidget {
   final String text;
   final bool obscureText;
+  final int differentiate;
   final Color innerColor;
   final Color textColor;
   final bool password;
@@ -34,6 +35,7 @@ class InputTextField extends StatefulWidget {
     required this.text,
     required this.innerColor,
     required this.textColor,
+    required this.differentiate,
   }) : super(key: key);
 
   @override
@@ -77,7 +79,8 @@ class _InputTextFieldState extends State<InputTextField> {
               style: TextStyle(
                   fontFamily: UsedFonts().familyModernist,
                   fontWeight: FontWeight.w400,
-                  color: descriptionColor,
+                  color:
+                      widget.differentiate == 1 ? descriptionColor : mainBlack,
                   fontSize: fontSize(20)),
               controller: widget.controller,
               onChanged: widget.onChanged,
