@@ -40,7 +40,8 @@ class SignInScreen extends StatelessWidget {
                 ),
                 Padding(
                     padding: EdgeInsets.only(
-                      top: height * 0.45,
+                      top: height * 0.42,
+                      bottom: heightSize(10)
                     ),
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: widthSize(16)),
@@ -105,7 +106,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(32)),
                           buttonWidget(context, "Login", () {
-                            Get.to(() => const HomeScreen());
+                            Get.to(() =>  HomeScreen());
                           }),
                           SizedBox(height: heightSize(12)),
                           Row(

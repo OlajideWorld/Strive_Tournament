@@ -38,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(
-                    top: height * 0.40,
+                    top: height * 0.37,
                     right: widthSize(8),
                     left: widthSize(8),
                     bottom: heightSize(10)),
@@ -102,7 +102,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: heightSize(32)),
                         buttonWidget(context, "SIGN UP", () {
-                          Get.to(() => const HomeScreen());
+                          Get.to(() =>  HomeScreen());
                         }),
                         SizedBox(height: heightSize(12)),
                         Row(

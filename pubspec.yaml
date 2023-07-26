@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_card_swiper: ^6.0.0
   flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.5
   get: ^4.6.5
@@ -40,19 +41,17 @@ dependencies:
   slider_button: ^2.0.0
   swipe_deck: ^1.1.0
 
-
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/icons/appicon.png"
-  adaptive_icon_background: "assets/icons/appicon.png" 
+  adaptive_icon_background: "assets/icons/appicon.png"
   min_sdk_android: 19 # android min sdk
 
 dev_dependencies:
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -76,7 +75,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Akira Expanded 
+    - family: Akira Expanded
       fonts:
         - asset: assets/fonts/akira_expanded/Akira Expanded Demo.otf
     - family: Sk-Modernist
@@ -84,6 +83,5 @@ flutter:
         - asset: assets/fonts/sk-modernist/Sk-Modernist-Bold.otf
         - asset: assets/fonts/sk-modernist/Sk-Modernist-Mono.otf
         - asset: assets/fonts/sk-modernist/Sk-Modernist-Regular.otf
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

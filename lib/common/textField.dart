@@ -54,7 +54,7 @@ class _InputTextFieldState extends State<InputTextField> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: heightSize(96),
+      height: heightSize(98),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

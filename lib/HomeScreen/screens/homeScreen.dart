@@ -1,16 +1,19 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:strive/utils/colors.dart';
 
+import '../../common/CardsDetails.dart';
 import '../../common/textstyle.dart';
 import '../../utils/sizes.dart';
 import '../components/frames.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
 
+  final CardSwiperController controller = CardSwiperController();
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -31,14 +34,35 @@ class HomeScreen extends StatelessWidget {
           ),
           child: Column(children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 imageFrames(context),
                 searchBarFrame(context),
                 iconFrame(context, "assets/images/bellicon.svg"),
                 iconFrame(context, "assets/images/searchicon.svg")
               ],
-            )
+            ),
+            SizedBox(height: heightSize(32)),
+            Text(
+              "TOURNAMENT",
+              style: TextStyle(
+                  color: textColor,
+                  fontSize: fontSize(24),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800),
+            ),
+            SizedBox(height: heightSize(40)),
+            Flexible(
+                fit: FlexFit.loose,
+                child: CardSwiper(
+                  cardsCount: CardDetails().cards.length,
+                  controller: controller,
+                  backCardOffset: const Offset(0, 38),
+                  numberOfCardsDisplayed: CardDetails().cards.length,
+                  cardBuilder: (context, index, horizontalThresholdPercentage,
+                      verticalThresholdPercentage) {
+                    return CardDetails().cards[index];
+                  },
+                ))
           ]),
         ),
       );

@@ -32,10 +32,9 @@ imageFrames(conatext) {
 
 searchBarFrame(context) {
   return Container(
-    width: widthSize(193),
     height: heightSize(58),
     padding: EdgeInsets.symmetric(
-        horizontal: widthSize(12), vertical: heightSize(17)),
+        horizontal: widthSize(10), vertical: heightSize(17)),
     decoration: ShapeDecoration(
       color: Colors.white.withOpacity(0.20000000298023224),
       shape: RoundedRectangleBorder(
@@ -53,7 +52,7 @@ searchBarFrame(context) {
             color: mainWhite,
             fontWeight: FontWeight.w400),
       ),
-      Spacer(),
+      SizedBox(width: widthSize(25)),
       SizedBox(
         child: SvgPicture.asset("assets/images/dropdownIcon.svg"),
       )
