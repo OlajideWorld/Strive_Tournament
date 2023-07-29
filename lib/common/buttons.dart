@@ -1,8 +1,7 @@
+import 'package:artelio/common/textstyle.dart';
 import 'package:flutter/material.dart';
-import 'package:strive/common/textstyle.dart';
-import 'package:strive/utils/sizes.dart';
-
 import '../utils/colors.dart';
+import '../utils/sizes.dart';
 
 buttonWidget(BuildContext context, String text, VoidCallback onTap) {
   final width = MediaQuery.of(context).size.width;

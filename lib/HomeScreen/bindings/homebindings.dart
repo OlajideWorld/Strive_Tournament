@@ -1,5 +1,5 @@
+import 'package:artelio/HomeScreen/controller/homecontroller.dart';
 import 'package:get/get.dart';
-import 'package:strive/HomeScreen/controller/homecontroller.dart';
 
 class HomeBinding extends Bindings {
   @override

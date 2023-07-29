@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
+import 'package:artelio/common/textstyle.dart';
 import 'package:flutter/material.dart';
-import 'package:strive/common/textstyle.dart';
 
 import '../utils/colors.dart';
 import '../utils/sizes.dart';

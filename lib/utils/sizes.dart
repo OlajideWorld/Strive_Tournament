@@ -1,4 +1,6 @@
-import 'package:strive/utils/size-config.dart';
+
+
+import 'package:artelio/utils/size-config.dart';
 
 double widthSize(double value) {
   double size = value / 4.14;

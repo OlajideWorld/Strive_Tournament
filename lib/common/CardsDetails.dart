@@ -1,7 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:strive/utils/sizes.dart';
+
+import '../utils/sizes.dart';
 
 class CardDetails {
   List<Container> cards = [

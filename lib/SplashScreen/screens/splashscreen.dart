@@ -1,8 +1,8 @@
+import 'package:artelio/SIgn-in%20page/screens/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slider_button/slider_button.dart';
-import 'package:strive/routes/routes.dart';
-
+import '../../routes/routes.dart';
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
@@ -63,7 +63,7 @@ class SplashScreen extends StatelessWidget {
                     SizedBox(height: heightSize(52)),
                     SliderButton(
                       action: () {
-                        Get.toNamed(myRoutes.signinScreen);
+                        Get.to(() => const SignInScreen());
                       },
 
                       ///Put label over here

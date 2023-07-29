@@ -1,9 +1,8 @@
+import 'package:artelio/routes/routes.dart';
+import 'package:artelio/utils/size-config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:strive/routes/routes.dart';
-
-import 'package:strive/utils/size-config.dart';
 
 import 'HomeScreen/bindings/homebindings.dart';
 

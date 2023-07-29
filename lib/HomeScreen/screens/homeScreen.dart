@@ -2,11 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:strive/utils/colors.dart';
 
 import '../../common/CardsDetails.dart';
 import '../../common/textstyle.dart';
+import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
 import '../components/frames.dart';
 

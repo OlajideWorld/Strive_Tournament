@@ -1,12 +1,11 @@
+import 'package:artelio/SIgn-in%20page/screens/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:strive/HomeScreen/screens/homeScreen.dart';
-import 'package:strive/SIgn-in%20page/screens/sign_up_page.dart';
-import 'package:strive/common/buttons.dart';
-import 'package:strive/common/textField.dart';
-import 'package:strive/common/textstyle.dart';
-
+import '../../HomeScreen/screens/homeScreen.dart';
+import '../../common/buttons.dart';
+import '../../common/textField.dart';
+import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
 
@@ -40,9 +39,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 Padding(
                     padding: EdgeInsets.only(
-                      top: height * 0.42,
-                      bottom: heightSize(10)
-                    ),
+                        top: height * 0.42, bottom: heightSize(10)),
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: widthSize(16)),
                       decoration: BoxDecoration(
@@ -106,7 +103,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                           SizedBox(height: heightSize(32)),
                           buttonWidget(context, "Login", () {
-                            Get.to(() =>  HomeScreen());
+                            Get.to(() => HomeScreen());
                           }),
                           SizedBox(height: heightSize(12)),
                           Row(

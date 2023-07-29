@@ -1,8 +1,8 @@
 
 import 'package:get/get.dart';
-import 'package:strive/SIgn-in%20page/screens/sign_in_page.dart';
 
 import '../HomeScreen/screens/homeScreen.dart';
+import '../SIgn-in page/screens/sign_in_page.dart';
 import '../SplashScreen/screens/splashscreen.dart';
 
 class myRoutes {

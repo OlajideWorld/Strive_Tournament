@@ -1,10 +1,9 @@
 import "package:flutter/material.dart";
 import "package:get/get.dart";
-import "package:strive/common/buttons.dart";
-import "package:strive/common/textstyle.dart";
-
 import "../../HomeScreen/screens/homeScreen.dart";
+import "../../common/buttons.dart";
 import "../../common/textField.dart";
+import "../../common/textstyle.dart";
 import "../../utils/colors.dart";
 import "../../utils/sizes.dart";
 
@@ -102,7 +101,7 @@ class SignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: heightSize(32)),
                         buttonWidget(context, "SIGN UP", () {
-                          Get.to(() =>  HomeScreen());
+                          Get.to(() => HomeScreen());
                         }),
                         SizedBox(height: heightSize(12)),
                         Row(
