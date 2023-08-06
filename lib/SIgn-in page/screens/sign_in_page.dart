@@ -64,7 +64,7 @@ class SignInScreen extends StatelessWidget {
                           Text(
                             "Welcome back!",
                             style: TextStyle(
-                              color: textColor,
+                              color: mainColor,
                               fontSize: fontSize(20),
                               fontFamily: UsedFonts().familyAkira,
                               fontWeight: FontWeight.w800,
@@ -74,7 +74,7 @@ class SignInScreen extends StatelessWidget {
                           Text(
                             "Please enter your email address and password",
                             style: TextStyle(
-                                color: descriptionColor,
+                                color: mainColor,
                                 fontFamily: UsedFonts().familyModernist,
                                 fontWeight: FontWeight.w400,
                                 fontSize: fontSize(14)),
@@ -82,7 +82,7 @@ class SignInScreen extends StatelessWidget {
                           SizedBox(height: heightSize(22)),
                           const InputTextField(
                             differentiate: 1,
-                            textColor: textColor,
+                            textColor: mainColor,
                             innerColor: Color(0xFF3E3E3E),
                             text: "Username",
                             hintText: "Enter your username",
@@ -93,7 +93,7 @@ class SignInScreen extends StatelessWidget {
                           SizedBox(height: heightSize(8)),
                           const InputTextField(
                             differentiate: 1,
-                            textColor: textColor,
+                            textColor: mainColor,
                             innerColor: Color(0xFF3E3E3E),
                             text: "Password",
                             hintText: "*******",
@@ -104,7 +104,7 @@ class SignInScreen extends StatelessWidget {
                           SizedBox(height: heightSize(32)),
                           buttonWidget(context, "Login", () {
                             Get.to(() => HomeScreen());
-                          }),
+                          }, mainColor, mainBlack),
                           SizedBox(height: heightSize(12)),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -115,7 +115,7 @@ class SignInScreen extends StatelessWidget {
                                     fontSize: fontSize(16),
                                     fontFamily: UsedFonts().familyModernist,
                                     fontWeight: FontWeight.w400,
-                                    color: backgroundSecondary),
+                                    color: mainColor),
                               ),
                               GestureDetector(
                                 onTap: () => Get.to(() => const SignUpScreen()),

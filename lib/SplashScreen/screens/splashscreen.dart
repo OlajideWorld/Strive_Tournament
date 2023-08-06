@@ -77,7 +77,7 @@ class SplashScreen extends StatelessWidget {
                         ),
                       ),
                       icon: const Center(
-                        child: Icon(Icons.double_arrow_sharp),
+                        child: Icon(Icons.double_arrow_sharp, color: mainColor),
                       ),
 
                       ///Change All the color and size from here.
@@ -85,10 +85,10 @@ class SplashScreen extends StatelessWidget {
                       width: widthSize(288),
                       buttonSize: heightSize(56),
                       radius: widthSize(34),
-                      buttonColor: mainWhite,
-                      backgroundColor: buttonColor,
+                      buttonColor: mainBlack,
+                      backgroundColor: mainColor,
                       highlightedColor: Colors.white,
-                      baseColor: Colors.red,
+                      baseColor: mainColor,
                     )
                   ],
                 ),

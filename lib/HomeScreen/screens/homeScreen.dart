@@ -24,13 +24,7 @@ class HomeScreen extends StatelessWidget {
           width: width,
           padding: EdgeInsets.only(
               left: widthSize(4), right: widthSize(4), top: height * 0.05),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment(0.00, -1.00),
-              end: Alignment(0, 1),
-              colors: [Color(0xFFB5B0A3), Color(0xFF262626)],
-            ),
-          ),
+          decoration: const BoxDecoration(color: mainColor),
           child: Column(children: [
             Row(
               children: [
@@ -56,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   cardsCount: CardDetails().cards.length,
                   controller: controller,
                   backCardOffset: const Offset(0, 38),
-                  numberOfCardsDisplayed: CardDetails().cards.length,
+                  numberOfCardsDisplayed: 3,
                   cardBuilder: (context, index, horizontalThresholdPercentage,
                       verticalThresholdPercentage) {
                     return CardDetails().cards[index];

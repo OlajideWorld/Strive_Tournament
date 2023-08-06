@@ -42,14 +42,14 @@ searchBarFrame(context) {
       ),
     ),
     child: Row(children: [
-      Icon(Icons.location_on, size: heightSize(24), color: mainWhite),
+      Icon(Icons.location_on, size: heightSize(24), color: mainColor),
       SizedBox(width: widthSize(8)),
       Text(
         "Surakarta, Ind",
         style: TextStyle(
             fontSize: fontSize(14),
             fontFamily: UsedFonts().familyModernist,
-            color: mainWhite,
+            color: mainBlack,
             fontWeight: FontWeight.w400),
       ),
       SizedBox(width: widthSize(25)),
@@ -66,7 +66,7 @@ iconFrame(context, String image) {
     width: widthSize(58),
     padding: EdgeInsets.all(widthSize(17)),
     decoration: ShapeDecoration(
-      color: mainWhite,
+      color: mainColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(29),
       ),

@@ -10,5 +10,5 @@ const backgroundSecondary = Color(0xFFF4F4F4);
 const descriptionColor = Color(0xFFBEBEBE);
 const buttonColor = Color(0xFFFE4655);
 const mainBlack = Color(0xFF000000);
-const mainWhite = Color(0xFFFFFFFF);
+const mainColor = Color(0xFF6A0DAD);
 const textColor = Color(0xFFF9F9F9);

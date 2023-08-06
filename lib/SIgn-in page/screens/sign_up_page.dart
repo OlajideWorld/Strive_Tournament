@@ -50,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                       right: widthSize(8),
                       bottom: heightSize(24)),
                   decoration: ShapeDecoration(
-                    color: mainWhite,
+                    color: mainColor,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                     ),
@@ -102,7 +102,7 @@ class SignUpScreen extends StatelessWidget {
                         SizedBox(height: heightSize(32)),
                         buttonWidget(context, "SIGN UP", () {
                           Get.to(() => HomeScreen());
-                        }),
+                        }, mainBlack, mainColor),
                         SizedBox(height: heightSize(12)),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
