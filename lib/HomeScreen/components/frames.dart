@@ -1,5 +1,7 @@
+import 'package:artelio/HomeScreen/screens/searchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
@@ -31,32 +33,37 @@ imageFrames(conatext) {
 }
 
 searchBarFrame(context) {
-  return Container(
-    height: heightSize(58),
-    padding: EdgeInsets.symmetric(
-        horizontal: widthSize(10), vertical: heightSize(17)),
-    decoration: ShapeDecoration(
-      color: Colors.white.withOpacity(0.20000000298023224),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(29),
+  return GestureDetector(
+    onTap: () {
+      Get.to(() => HomeSearchScreen());
+    },
+    child: Container(
+      height: heightSize(58),
+      padding: EdgeInsets.symmetric(
+          horizontal: widthSize(10), vertical: heightSize(17)),
+      decoration: ShapeDecoration(
+        color: Colors.white.withOpacity(0.20000000298023224),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(29),
+        ),
       ),
+      child: Row(children: [
+        Icon(Icons.location_on, size: heightSize(24), color: mainColor),
+        SizedBox(width: widthSize(8)),
+        Text(
+          "Surakarta, Ind",
+          style: TextStyle(
+              fontSize: fontSize(14),
+              fontFamily: UsedFonts().familyModernist,
+              color: mainBlack,
+              fontWeight: FontWeight.w400),
+        ),
+        SizedBox(width: widthSize(25)),
+        SizedBox(
+          child: SvgPicture.asset("assets/images/dropdownIcon.svg"),
+        )
+      ]),
     ),
-    child: Row(children: [
-      Icon(Icons.location_on, size: heightSize(24), color: mainColor),
-      SizedBox(width: widthSize(8)),
-      Text(
-        "Surakarta, Ind",
-        style: TextStyle(
-            fontSize: fontSize(14),
-            fontFamily: UsedFonts().familyModernist,
-            color: mainBlack,
-            fontWeight: FontWeight.w400),
-      ),
-      SizedBox(width: widthSize(25)),
-      SizedBox(
-        child: SvgPicture.asset("assets/images/dropdownIcon.svg"),
-      )
-    ]),
   );
 }
 
@@ -66,7 +73,7 @@ iconFrame(context, String image) {
     width: widthSize(58),
     padding: EdgeInsets.all(widthSize(17)),
     decoration: ShapeDecoration(
-      color: mainColor,
+      color: backgroundSecondary,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(29),
       ),

@@ -1,18 +1,22 @@
 // ignore_for_file: file_names
 
+import 'package:artelio/HomeScreen/components/bottomsheet.dart';
+import 'package:artelio/HomeScreen/controller/homecontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:get/get.dart';
 
 import '../../common/CardsDetails.dart';
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
+import '../components/cardButtons.dart';
 import '../components/frames.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final CardSwiperController controller = CardSwiperController();
+  final HomeController controller = HomeController.instance;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -23,7 +27,10 @@ class HomeScreen extends StatelessWidget {
           height: height,
           width: width,
           padding: EdgeInsets.only(
-              left: widthSize(4), right: widthSize(4), top: height * 0.05),
+              left: widthSize(4),
+              right: widthSize(4),
+              top: height * 0.05,
+              bottom: heightSize(10)),
           decoration: const BoxDecoration(color: mainColor),
           child: Column(children: [
             Row(
@@ -45,17 +52,24 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: heightSize(40)),
             Flexible(
-                fit: FlexFit.loose,
+              child: SizedBox(
+                height: heightSize(350),
                 child: CardSwiper(
                   cardsCount: CardDetails().cards.length,
-                  controller: controller,
+                  controller: controller.cardController,
                   backCardOffset: const Offset(0, 38),
                   numberOfCardsDisplayed: 3,
                   cardBuilder: (context, index, horizontalThresholdPercentage,
                       verticalThresholdPercentage) {
                     return CardDetails().cards[index];
                   },
-                ))
+                ),
+              ),
+            ),
+            SizedBox(height: heightSize(72)),
+            cardButtons(context),
+            SizedBox(height: heightSize(24)),
+            homeButtons(context)
           ]),
         ),
       );

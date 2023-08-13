@@ -18,7 +18,7 @@ class _SplashScreenInitialState extends State<SplashScreenInitial> {
     // TODO: implement initState
     super.initState();
     videoPlayerController =
-        VideoPlayerController.asset("assets/videos/video1.MP4");
+        VideoPlayerController.asset("assets/videos/video2.MP4");
 
     videoPlayerController.setLooping(true);
 
@@ -37,6 +37,7 @@ class _SplashScreenInitialState extends State<SplashScreenInitial> {
   void playVideo() async {
     videoPlayerController.play();
     await Future.delayed(Duration(seconds: 7), () {});
+    videoPlayerController.pause();
     Get.to(() => const SplashScreen());
   }
 

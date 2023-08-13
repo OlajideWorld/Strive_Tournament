@@ -33,13 +33,13 @@ class SignInScreen extends StatelessWidget {
                     child: SizedBox(
                       height: heightSize(710),
                       width: width,
-                      child: Image.asset("assets/images/onboardimage2.png"),
+                      child: Image.asset("assets/images/album5.png"),
                     ),
                   ),
                 ),
                 Padding(
                     padding: EdgeInsets.only(
-                        top: height * 0.42, bottom: heightSize(10)),
+                        top: height * 0.45, bottom: heightSize(10)),
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: widthSize(16)),
                       decoration: BoxDecoration(
@@ -55,12 +55,6 @@ class SignInScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            height: heightSize(32),
-                            child: SvgPicture.asset(
-                                "assets/images/splashimage.svg"),
-                          ),
-                          SizedBox(height: heightSize(24)),
                           Text(
                             "Welcome back!",
                             style: TextStyle(

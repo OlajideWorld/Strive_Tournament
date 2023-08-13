@@ -2,6 +2,7 @@ import 'package:artelio/routes/routes.dart';
 import 'package:artelio/utils/size-config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
 import 'HomeScreen/bindings/homebindings.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       SizeConfig().init(constraints);
       return GetMaterialApp(
-        title: 'Strive',
+        builder: FlutterSmartDialog.init(),
+        title: 'Artelio',
         theme: ThemeData(
           useMaterial3: true,
           primarySwatch: Colors.deepOrange,

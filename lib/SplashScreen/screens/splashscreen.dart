@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
               opacity: 0.3,
               child: SizedBox(
                 height: heightSize(542),
-                child: Image.asset("assets/images/onboardimage.png"),
+                child: Image.asset("assets/images/album1.png"),
               ),
             ),
           ),
@@ -38,16 +38,6 @@ class SplashScreen extends StatelessWidget {
               child: SizedBox(
                 child: Column(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: widthSize(102), right: widthSize(102)),
-                      child: SizedBox(
-                        height: heightSize(32),
-                        child:
-                            SvgPicture.asset("assets/images/splashimage.svg"),
-                      ),
-                    ),
-                    SizedBox(height: heightSize(16)),
                     SizedBox(
                       width: widthSize(287),
                       child: Text(
