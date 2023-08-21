@@ -1,4 +1,5 @@
 import 'package:artelio/HomeScreen/screens/searchScreen.dart';
+import 'package:artelio/Profile%20Pages/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -8,25 +9,28 @@ import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
 
 imageFrames(conatext) {
-  return Container(
-    height: heightSize(58),
-    width: widthSize(58),
-    padding: EdgeInsets.all(widthSize(6)),
-    decoration: ShapeDecoration(
-      color: Colors.white.withOpacity(0.20000000298023224),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(29),
-      ),
-    ),
+  return GestureDetector(
+    onTap: () => Get.to(() => const ProfileScreen()),
     child: Container(
-      width: widthSize(46),
-      height: heightSize(46),
-      decoration: const ShapeDecoration(
-        color: Color(0xFFCBCAB2),
-        shape: OvalBorder(),
-        image: DecorationImage(
-            image: AssetImage("assets/images/avatarimage6.png"),
-            fit: BoxFit.fill),
+      height: heightSize(58),
+      width: widthSize(58),
+      padding: EdgeInsets.all(widthSize(6)),
+      decoration: ShapeDecoration(
+        color: Colors.white.withOpacity(0.20000000298023224),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(29),
+        ),
+      ),
+      child: Container(
+        width: widthSize(46),
+        height: heightSize(46),
+        decoration: const ShapeDecoration(
+          color: Color(0xFFCBCAB2),
+          shape: OvalBorder(),
+          image: DecorationImage(
+              image: AssetImage("assets/images/avatarimage6.png"),
+              fit: BoxFit.fill),
+        ),
       ),
     ),
   );
@@ -67,23 +71,26 @@ searchBarFrame(context) {
   );
 }
 
-iconFrame(context, String image) {
-  return Container(
-    height: heightSize(58),
-    width: widthSize(58),
-    padding: EdgeInsets.all(widthSize(17)),
-    decoration: ShapeDecoration(
-      color: backgroundSecondary,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(29),
+iconFrame(context, String image, VoidCallback onTap) {
+  return GestureDetector(
+    onTap: onTap,
+    child: Container(
+      height: heightSize(58),
+      width: widthSize(58),
+      padding: EdgeInsets.all(widthSize(17)),
+      decoration: ShapeDecoration(
+        color: backgroundSecondary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(29),
+        ),
       ),
+      child: SizedBox(
+          height: heightSize(24),
+          width: widthSize(24),
+          child: SvgPicture.asset(
+            image,
+            fit: BoxFit.fitHeight,
+          )),
     ),
-    child: SizedBox(
-        height: heightSize(24),
-        width: widthSize(24),
-        child: SvgPicture.asset(
-          image,
-          fit: BoxFit.fitHeight,
-        )),
   );
 }

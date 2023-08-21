@@ -36,10 +36,12 @@ dependencies:
   flutter_native_splash: ^2.2.19
   flutter_smart_dialog: ^4.9.4
   flutter_svg: ^2.0.5
+  font_awesome_flutter: ^10.5.0
   get: ^4.6.5
   http: ^0.13.6
   icons_launcher: ^2.1.0
   image_fade: ^0.6.2
+  pin_code_fields: ^8.0.1
   slider_button: ^2.0.0
   swipe_deck: ^1.1.0
   video_player: ^2.7.0

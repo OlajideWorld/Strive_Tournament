@@ -1,5 +1,7 @@
+import 'package:artelio/HomeScreen/screens/payment_tournament.dart';
 import 'package:artelio/common/textField.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../common/buttons.dart';
 import '../../common/textstyle.dart';
@@ -70,8 +72,9 @@ class RegisterTournamentScreen2 extends StatelessWidget {
                   differentiate: 2),
               //
               const Spacer(),
-              buttonWidget(
-                  context, "Continue", () {}, mainColor, backgroundSecondary)
+              buttonWidget(context, "Continue", () {
+                Get.to(() => const PaymentTournamentSccreen());
+              }, mainColor, backgroundSecondary)
             ]),
           ),
         ));

@@ -1,4 +1,5 @@
 import 'package:artelio/HomeScreen/screens/searchScreen.dart';
+import 'package:artelio/HomeScreen/screens/tournament_description.dart';
 import 'package:artelio/common/textstyle.dart';
 import 'package:artelio/utils/colors.dart';
 import 'package:artelio/utils/sizes.dart';
@@ -17,7 +18,7 @@ showButtomSheetIcons(BuildContext context) {
       builder: (context) {
         return Container(
           height: height * 0.68,
-          width: widthSize(347),
+          width: width,
           decoration: BoxDecoration(
               color: Color.fromARGB(31, 97, 96, 96),
               borderRadius: const BorderRadius.all(Radius.circular(32)),
@@ -34,8 +35,20 @@ showButtomSheetIcons(BuildContext context) {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        iconCards("assets/images/gamelogo2.png", false),
-                        iconCards("assets/images/gamelogo3.png", false),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const TournamentDescriptionPage());
+                          },
+                          child:
+                              iconCards("assets/images/gamelogo2.png", false),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const TournamentDescriptionPage());
+                          },
+                          child:
+                              iconCards("assets/images/gamelogo3.png", false),
+                        ),
                         iconCards("assets/images/gamelogo4.png", false),
                         iconCards("assets/images/gamelogo5.png", false)
                       ],

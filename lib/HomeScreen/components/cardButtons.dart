@@ -146,7 +146,7 @@ homeButtons(BuildContext context) {
       ),
       Container(
         height: heightSize(56),
-        width: widthSize(104),
+        width: widthSize(103),
         decoration: ShapeDecoration(
           color: Color(0xFF292929),
           shape: RoundedRectangleBorder(
@@ -173,7 +173,7 @@ homeButtons(BuildContext context) {
             },
             child: Container(
                 height: heightSize(48),
-                width: widthSize(48),
+                width: widthSize(46),
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(32),

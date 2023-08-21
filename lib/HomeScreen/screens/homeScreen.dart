@@ -2,6 +2,7 @@
 
 import 'package:artelio/HomeScreen/components/bottomsheet.dart';
 import 'package:artelio/HomeScreen/controller/homecontroller.dart';
+import 'package:artelio/HomeScreen/screens/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
@@ -37,8 +38,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 imageFrames(context),
                 searchBarFrame(context),
-                iconFrame(context, "assets/images/bellicon.svg"),
-                iconFrame(context, "assets/images/searchicon.svg")
+                iconFrame(context, "assets/images/bellicon.svg", () {
+                  Get.to(() => NotificationScreen());
+                }),
+                iconFrame(context, "assets/images/searchicon.svg", () {})
               ],
             ),
             SizedBox(height: heightSize(32)),

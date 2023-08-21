@@ -55,20 +55,20 @@ class HomeSearchScreen extends StatelessWidget {
                             ),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(29)),
+                                    const BorderRadius.all(Radius.circular(29)),
                                 borderSide: BorderSide(
                                     color: Colors.white
                                         .withOpacity(0.20000000298023224))),
                             enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(29)),
+                                    const BorderRadius.all(Radius.circular(29)),
                                 borderSide: BorderSide(
                                     color: Colors.white
                                         .withOpacity(0.20000000298023224)))),
                       ),
                     ),
                   ),
-                  iconFrame(context, "assets/images/searchicon.svg")
+                  iconFrame(context, "assets/images/searchicon.svg", () {})
                 ],
               ),
             ]),

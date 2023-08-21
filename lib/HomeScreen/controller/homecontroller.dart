@@ -5,7 +5,7 @@ class HomeController extends GetxController {
   static HomeController instance = Get.find();
   final CardSwiperController cardController = CardSwiperController();
   RxBool isLoggedIn = false.obs;
-
+  RxBool isSelected = false.obs;
   @override
   void onInit() {
     // TODO: implement onInit

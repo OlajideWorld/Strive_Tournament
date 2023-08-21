@@ -132,112 +132,115 @@ class CardScreenWidegt extends StatelessWidget {
 
 showCustomDialog(BuildContext context) {
   final width = MediaQuery.of(context).size.width;
-  return SmartDialog.show(builder: (context) {
-    return Padding(
-      padding: const EdgeInsets.all(8),
-      child: Container(
-        height: heightSize(580),
-        width: width,
-        padding: EdgeInsets.symmetric(horizontal: widthSize(8)),
-        decoration: ShapeDecoration(
-          color: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
-        ),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
-            'REGISTER \nTOURNAMENT',
-            style: TextStyle(
-              color: Color(0xFF212121),
-              fontSize: fontSize(24),
-              fontFamily: UsedFonts().familyAkira,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          SizedBox(height: heightSize(18)),
-          Text(
-            'Registration Fee',
-            style: TextStyle(
-              color: Color(0xFFBEBEBE),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyModernist,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          SizedBox(height: heightSize(8)),
-          Text(
-            '\$ 12.86',
-            style: TextStyle(
-              color: Color(0xFFFE4655),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyAkira,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          SizedBox(height: heightSize(16)),
-          Text(
-            'Tournament Venue',
-            style: TextStyle(
-              color: Color(0xFFBEBEBE),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyModernist,
-              fontWeight: FontWeight.w400,
-              height: 1.40,
-            ),
-          ),
-          SizedBox(height: heightSize(8)),
-          Text(
-            'ONLINE TOURNAMENT',
-            style: TextStyle(
-              color: Color(0xFF212121),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyAkira,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          SizedBox(height: heightSize(18)),
-          Text(
-            'Tournament Date',
-            style: TextStyle(
-              color: Color(0xFFBEBEBE),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyModernist,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          SizedBox(height: heightSize(8)),
-          Text(
-            'SATURDAY, 01 OCT 2022',
-            style: TextStyle(
-              color: Color(0xFF212121),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyAkira,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          SizedBox(height: heightSize(16)),
-          Text(
-            'Choose Team',
-            style: TextStyle(
-              color: Color(0xFFBEBEBE),
-              fontSize: fontSize(20),
-              fontFamily: UsedFonts().familyModernist,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          SizedBox(height: heightSize(16)),
-          SizedBox(
-            height: heightSize(120),
+  return SmartDialog.show(
+      alignment: Alignment.topCenter,
+      builder: (context) {
+        return Padding(
+          padding: EdgeInsets.only(top: heightSize(40)),
+          child: Container(
+            height: heightSize(580),
             width: width,
-            child: SvgPicture.asset("assets/images/ButtonalertDialog.svg"),
+            padding: EdgeInsets.symmetric(horizontal: widthSize(8)),
+            decoration: ShapeDecoration(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+            ),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                'REGISTER \nTOURNAMENT',
+                style: TextStyle(
+                  color: Color(0xFF212121),
+                  fontSize: fontSize(24),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(height: heightSize(18)),
+              Text(
+                'Registration Fee',
+                style: TextStyle(
+                  color: Color(0xFFBEBEBE),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyModernist,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(height: heightSize(8)),
+              Text(
+                '\$ 12.86',
+                style: TextStyle(
+                  color: Color(0xFFFE4655),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(height: heightSize(16)),
+              Text(
+                'Tournament Venue',
+                style: TextStyle(
+                  color: Color(0xFFBEBEBE),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyModernist,
+                  fontWeight: FontWeight.w400,
+                  height: 1.40,
+                ),
+              ),
+              SizedBox(height: heightSize(8)),
+              Text(
+                'ONLINE TOURNAMENT',
+                style: TextStyle(
+                  color: Color(0xFF212121),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(height: heightSize(18)),
+              Text(
+                'Tournament Date',
+                style: TextStyle(
+                  color: Color(0xFFBEBEBE),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyModernist,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(height: heightSize(8)),
+              Text(
+                'SATURDAY, 01 OCT 2022',
+                style: TextStyle(
+                  color: Color(0xFF212121),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              SizedBox(height: heightSize(16)),
+              Text(
+                'Choose Team',
+                style: TextStyle(
+                  color: Color(0xFFBEBEBE),
+                  fontSize: fontSize(20),
+                  fontFamily: UsedFonts().familyModernist,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              SizedBox(height: heightSize(16)),
+              SizedBox(
+                height: heightSize(120),
+                width: width,
+                child: SvgPicture.asset("assets/images/ButtonalertDialog.svg"),
+              ),
+              SizedBox(height: heightSize(16)),
+              buttonWidget(context, "Continue", () {
+                Get.to(() => const RegisterTournament());
+              }, mainColor, backgroundSecondary)
+            ]),
           ),
-          SizedBox(height: heightSize(16)),
-          buttonWidget(context, "Continue", () {
-            Get.to(() => const RegisterTournament());
-          }, mainColor, backgroundSecondary)
-        ]),
-      ),
-    );
-  });
+        );
+      });
 }
