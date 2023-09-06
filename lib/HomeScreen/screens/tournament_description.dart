@@ -18,6 +18,18 @@ class TournamentDescriptionPage extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: mainColor,
+        bottomNavigationBar: Padding(
+          padding: EdgeInsets.only(
+            bottom: heightSize(10),
+          ),
+          child: buttonWidget(context, "JOIN TOURNAMENT", () {
+            if (controller.isSelected.value == true) {
+              Get.to(() => const ViewTournamentScreen());
+            } else {
+              Get.to(() => const ViewRuleTournamentScreen());
+            }
+          }, mainColor, Colors.white),
+        ),
         body: Padding(
           padding: EdgeInsets.only(
               top: height * 0.05,
@@ -35,125 +47,129 @@ class TournamentDescriptionPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
             ),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              SizedBox(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: SizedBox(
-                        height: heightSize(68),
-                        width: widthSize(68),
-                        child: SvgPicture.asset("assets/images/backarrow.svg"),
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: SizedBox(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                Get.back();
+                              },
+                              child: SizedBox(
+                                height: heightSize(68),
+                                width: widthSize(68),
+                                child: SvgPicture.asset(
+                                    "assets/images/backarrow.svg"),
+                              ),
+                            ),
+                            const Spacer(),
+                            SizedBox(
+                              height: heightSize(68),
+                              width: widthSize(68),
+                              child: SvgPicture.asset(
+                                "assets/images/button2.svg",
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            SizedBox(
+                              height: heightSize(68),
+                              width: widthSize(68),
+                              child: SvgPicture.asset(
+                                  "assets/images/bookmark.svg"),
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-                    const Spacer(),
-                    SizedBox(
-                      height: heightSize(68),
-                      width: widthSize(68),
-                      child: SvgPicture.asset(
-                        "assets/images/button2.svg",
-                        fit: BoxFit.contain,
+                      SizedBox(height: heightSize(16)),
+                      Text(
+                        'MOBILE LEGEND \nJAKSEL CUP',
+                        style: TextStyle(
+                          color: Color(0xFF212121),
+                          fontSize: fontSize(24),
+                          fontFamily: UsedFonts().familyAkira,
+                          fontWeight: FontWeight.w800,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: heightSize(68),
-                      width: widthSize(68),
-                      child: SvgPicture.asset("assets/images/bookmark.svg"),
-                    )
-                  ],
-                ),
+                      SizedBox(height: heightSize(8)),
+                      SizedBox(
+                          height: heightSize(100),
+                          width: width,
+                          child: Image.asset(
+                            "assets/images/album1.png",
+                            fit: BoxFit.fitWidth,
+                          )),
+                      SizedBox(height: heightSize(7)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            height: heightSize(49),
+                            width: widthSize(169),
+                            child: SvgPicture.asset("assets/images/ticket.svg"),
+                          ),
+                          SizedBox(
+                            height: heightSize(49),
+                            width: widthSize(169),
+                            child: SvgPicture.asset("assets/images/slot.svg"),
+                          )
+                        ],
+                      ),
+                      //
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            height: heightSize(49),
+                            width: widthSize(169),
+                            child: SvgPicture.asset("assets/images/date.svg"),
+                          ),
+                          SizedBox(
+                            height: heightSize(49),
+                            width: widthSize(169),
+                            child:
+                                SvgPicture.asset("assets/images/location.svg"),
+                          )
+                        ],
+                      ),
+                      SizedBox(height: heightSize(16)),
+                      tournamentWidget(context),
+                      SizedBox(height: heightSize(16)),
+                      Obx(
+                        () => Text(
+                          controller.isSelected.value == true
+                              ? 'DESCRIPTION'
+                              : "RULE",
+                          style: TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: fontSize(24),
+                            fontFamily: UsedFonts().familyAkira,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: width,
+                        child: Text(
+                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                          style: TextStyle(
+                            color: const Color(0xFF212121),
+                            fontSize: fontSize(20),
+                            fontFamily: UsedFonts().familyModernist,
+                            fontWeight: FontWeight.w400,
+                            overflow: TextOverflow.fade,
+                            height: 1.40,
+                          ),
+                        ),
+                      ),
+                    ]),
               ),
-              SizedBox(height: heightSize(16)),
-              Text(
-                'MOBILE LEGEND \nJAKSEL CUP',
-                style: TextStyle(
-                  color: Color(0xFF212121),
-                  fontSize: fontSize(24),
-                  fontFamily: UsedFonts().familyAkira,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              SizedBox(height: heightSize(8)),
-              SizedBox(
-                  height: heightSize(100),
-                  width: width,
-                  child: Image.asset(
-                    "assets/images/album1.png",
-                    fit: BoxFit.fitWidth,
-                  )),
-              SizedBox(height: heightSize(7)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    height: heightSize(49),
-                    width: widthSize(169),
-                    child: SvgPicture.asset("assets/images/ticket.svg"),
-                  ),
-                  SizedBox(
-                    height: heightSize(49),
-                    width: widthSize(169),
-                    child: SvgPicture.asset("assets/images/slot.svg"),
-                  )
-                ],
-              ),
-              //
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    height: heightSize(49),
-                    width: widthSize(169),
-                    child: SvgPicture.asset("assets/images/date.svg"),
-                  ),
-                  SizedBox(
-                    height: heightSize(49),
-                    width: widthSize(169),
-                    child: SvgPicture.asset("assets/images/location.svg"),
-                  )
-                ],
-              ),
-              SizedBox(height: heightSize(16)),
-              tournamentWidget(context),
-              SizedBox(height: heightSize(16)),
-              Obx(
-                () => Text(
-                  controller.isSelected.value == true ? 'DESCRIPTION' : "RULE",
-                  style: TextStyle(
-                    color: Color(0xFF212121),
-                    fontSize: fontSize(24),
-                    fontFamily: UsedFonts().familyAkira,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: width,
-                child: Text(
-                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                  style: TextStyle(
-                    color: const Color(0xFF212121),
-                    fontSize: fontSize(20),
-                    fontFamily: UsedFonts().familyModernist,
-                    fontWeight: FontWeight.w400,
-                    height: 1.40,
-                  ),
-                ),
-              ),
-              const Spacer(),
-              buttonWidget(context, "JOIN TOURNAMENT", () {
-                if (controller.isSelected.value == true) {
-                  Get.to(() => const ViewTournamentScreen());
-                } else {
-                  Get.to(() => const ViewRuleTournamentScreen());
-                }
-              }, mainColor, Colors.white)
-            ]),
+            ),
           ),
         ));
   }

@@ -28,14 +28,19 @@ notificationCard(BuildContext context, String image, String text, String active,
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            text,
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: fontSize(18),
-              fontFamily: UsedFonts().familyModernist,
-              fontWeight: FontWeight.w400,
-              height: 1.40,
+          SizedBox(
+            height: heightSize(25),
+            width: widthSize(250),
+            child: Text(
+              text,
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: fontSize(18),
+                fontFamily: UsedFonts().familyModernist,
+                fontWeight: FontWeight.w400,
+                overflow: TextOverflow.ellipsis,
+                height: 1.40,
+              ),
             ),
           ),
           SizedBox(
@@ -139,7 +144,6 @@ switchView() {
             padding: EdgeInsets.symmetric(
                 vertical: heightSize(11), horizontal: widthSize(25)),
             height: heightSize(38),
-            width: widthSize(133),
             decoration: ShapeDecoration(
               color: controller.isSelected.value == true
                   ? mainColor
@@ -170,7 +174,6 @@ switchView() {
             padding: EdgeInsets.symmetric(
                 vertical: heightSize(11), horizontal: widthSize(25)),
             height: heightSize(38),
-            width: widthSize(133),
             decoration: ShapeDecoration(
               color: controller.isSelected.value == false
                   ? mainColor

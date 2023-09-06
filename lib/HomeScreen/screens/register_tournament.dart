@@ -59,7 +59,7 @@ class RegisterTournament extends StatelessWidget {
               Text(
                 '\$ 12.86',
                 style: TextStyle(
-                  color: Color(0xFFFE4655),
+                  color: mainColor,
                   fontSize: fontSize(20),
                   fontFamily: UsedFonts().familyAkira,
                   fontWeight: FontWeight.w800,

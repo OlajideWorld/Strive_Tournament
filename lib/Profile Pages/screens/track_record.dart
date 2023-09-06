@@ -19,7 +19,7 @@ class TrackRecordScreen extends StatelessWidget {
       backgroundColor: mainColor,
       bottomNavigationBar: Padding(
         padding: EdgeInsets.only(
-            bottom: heightSize(10), left: widthSize(8), right: widthSize(8)),
+            bottom: heightSize(15), left: widthSize(8), right: widthSize(8)),
         child: buttonWidget(context, "Back", () {
           Get.back();
         }, Colors.white, mainColor),

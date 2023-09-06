@@ -157,8 +157,8 @@ class VerifyNumberScreen extends StatelessWidget {
                     ),
                     SizedBox(height: heightSize(32)),
                     Container(
-                      width: widthSize(114),
-                      height: heightSize(114),
+                      width: widthSize(100),
+                      height: heightSize(100),
                       padding: EdgeInsets.only(
                           top: heightSize(24),
                           left: widthSize(22),
@@ -172,19 +172,16 @@ class VerifyNumberScreen extends StatelessWidget {
                       ),
                       child: Image.asset("assets/images/mask.png"),
                     ),
-                    SizedBox(height: heightSize(32)),
-                    SizedBox(
-                      width: heightSize(338),
-                      child: Text(
-                        'Congratulations, your payment was successful and you have registered for the tournament, see your brackets',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: const Color(0xFF212121),
-                          fontSize: fontSize(20),
-                          fontFamily: UsedFonts().familyModernist,
-                          fontWeight: FontWeight.w400,
-                          height: 1.40,
-                        ),
+                    SizedBox(height: heightSize(20)),
+                    Text(
+                      'Congratulations, your payment was successful and you have registered for the tournament, see your brackets',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: const Color(0xFF212121),
+                        fontSize: fontSize(20),
+                        fontFamily: UsedFonts().familyModernist,
+                        fontWeight: FontWeight.w400,
+                        height: 1.40,
                       ),
                     ),
                     SizedBox(height: heightSize(16)),

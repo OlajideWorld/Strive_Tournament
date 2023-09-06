@@ -1,3 +1,4 @@
+import 'package:artelio/HomeScreen/components/tournament_details_widget.dart';
 import 'package:artelio/HomeScreen/screens/register_tournament.dart';
 import 'package:artelio/common/buttons.dart';
 import 'package:artelio/common/textstyle.dart';
@@ -31,7 +32,7 @@ class CardScreenWidegt extends StatelessWidget {
             padding: EdgeInsets.symmetric(
                 horizontal: widthSize(8), vertical: heightSize(8)),
             decoration: ShapeDecoration(
-              color: mainColor,
+              color: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
@@ -99,7 +100,9 @@ class CardScreenWidegt extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: heightSize(146)),
+              SizedBox(height: heightSize(16)),
+              tournamentWidget(context),
+              SizedBox(height: heightSize(16)),
               Text(
                 "Description",
                 style: TextStyle(
@@ -172,7 +175,7 @@ showCustomDialog(BuildContext context) {
               Text(
                 '\$ 12.86',
                 style: TextStyle(
-                  color: Color(0xFFFE4655),
+                  color: mainColor,
                   fontSize: fontSize(20),
                   fontFamily: UsedFonts().familyAkira,
                   fontWeight: FontWeight.w800,
@@ -233,7 +236,7 @@ showCustomDialog(BuildContext context) {
               SizedBox(
                 height: heightSize(120),
                 width: width,
-                child: SvgPicture.asset("assets/images/ButtonalertDialog.svg"),
+                child: Image.asset("assets/images/mask.png"),
               ),
               SizedBox(height: heightSize(16)),
               buttonWidget(context, "Continue", () {

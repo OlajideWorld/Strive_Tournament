@@ -149,7 +149,7 @@ saveArticle(BuildContext context) {
         return Padding(
           padding: EdgeInsets.symmetric(vertical: height * 0.05),
           child: Container(
-            height: heightSize(428),
+            height: heightSize(435),
             width: width,
             padding: EdgeInsets.only(
                 top: heightSize(16), left: widthSize(8), right: widthSize(8)),

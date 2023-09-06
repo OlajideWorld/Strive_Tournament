@@ -11,49 +11,52 @@ shareComment(BuildContext context) {
   return showModalBottomSheet(
       context: context,
       builder: (context) {
-        return Container(
-          width: width,
-          height: heightSize(327),
-          padding: EdgeInsets.only(
-              top: heightSize(16), left: widthSize(8), right: widthSize(8)),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-            Text(
-              'SHARE ARTICLE',
-              style: TextStyle(
-                color: Color(0xFF212121),
-                fontSize: fontSize(24),
-                fontFamily: UsedFonts().familyAkira,
-                fontWeight: FontWeight.w800,
+        return Padding(
+          padding: const EdgeInsets.all(10),
+          child: Container(
+            width: width,
+            height: heightSize(327),
+            padding: EdgeInsets.only(
+                top: heightSize(16), left: widthSize(8), right: widthSize(8)),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+              Text(
+                'SHARE ARTICLE',
+                style: TextStyle(
+                  color: Color(0xFF212121),
+                  fontSize: fontSize(24),
+                  fontFamily: UsedFonts().familyAkira,
+                  fontWeight: FontWeight.w800,
+                ),
               ),
-            ),
-            SizedBox(height: heightSize(16)),
-            SizedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  socialMedia(context, Icons.discord_sharp),
-                  socialMedia(context, FontAwesomeIcons.twitter),
-                  socialMedia(context, FontAwesomeIcons.whatsapp),
-                  socialMedia(context, FontAwesomeIcons.facebook)
-                ],
+              SizedBox(height: heightSize(16)),
+              SizedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    socialMedia(context, Icons.discord_sharp),
+                    socialMedia(context, FontAwesomeIcons.twitter),
+                    socialMedia(context, FontAwesomeIcons.whatsapp),
+                    socialMedia(context, FontAwesomeIcons.facebook)
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: heightSize(8)),
-            SizedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  socialMedia(context, FontAwesomeIcons.skype),
-                  socialMedia(context, FontAwesomeIcons.facebookMessenger),
-                  socialMedia(context, FontAwesomeIcons.instagram),
-                  socialMedia(context, FontAwesomeIcons.telegram)
-                ],
+              SizedBox(height: heightSize(8)),
+              SizedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    socialMedia(context, FontAwesomeIcons.skype),
+                    socialMedia(context, FontAwesomeIcons.facebookMessenger),
+                    socialMedia(context, FontAwesomeIcons.instagram),
+                    socialMedia(context, FontAwesomeIcons.telegram)
+                  ],
+                ),
               ),
-            ),
-            SizedBox(height: heightSize(16)),
-            buttonWidget(context, "CANCEL", () {}, mainColor, Colors.white)
-          ]),
+              SizedBox(height: heightSize(16)),
+              buttonWidget(context, "CANCEL", () {}, mainColor, Colors.white)
+            ]),
+          ),
         );
       });
 }

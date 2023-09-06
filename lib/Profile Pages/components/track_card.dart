@@ -99,6 +99,7 @@ textUsed(String text, double fosize, Color color) {
       fontSize: fontSize(fosize),
       fontFamily: UsedFonts().familyModernist,
       fontWeight: FontWeight.w400,
+      overflow: TextOverflow.ellipsis,
       height: 1.40,
     ),
   );

@@ -93,8 +93,8 @@ class LeaderBoardDetailsScreen extends StatelessWidget {
   options(String text, double width) {
     return Container(
       height: heightSize(38),
-      width: widthSize(width),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+      padding: EdgeInsets.symmetric(
+          horizontal: widthSize(16), vertical: heightSize(11)),
       decoration: ShapeDecoration(
         color: mainColor,
         shape: RoundedRectangleBorder(
