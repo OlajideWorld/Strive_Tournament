@@ -1,7 +1,6 @@
 import 'package:artelio/HomeScreen/screens/register_tournamnet2.dart';
 import 'package:artelio/common/buttons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../common/textstyle.dart';

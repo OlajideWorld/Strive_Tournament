@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:artelio/common/textstyle.dart';
 import 'package:artelio/utils/colors.dart';
 import 'package:flutter/material.dart';

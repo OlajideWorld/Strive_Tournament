@@ -1,6 +1,5 @@
 import 'package:artelio/HomeScreen/components/commentsCard.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';

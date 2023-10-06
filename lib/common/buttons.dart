@@ -1,6 +1,5 @@
 import 'package:artelio/common/textstyle.dart';
 import 'package:flutter/material.dart';
-import '../utils/colors.dart';
 import '../utils/sizes.dart';
 
 buttonWidget(BuildContext context, String text, VoidCallback onTap,

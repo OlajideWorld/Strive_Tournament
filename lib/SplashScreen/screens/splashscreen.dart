@@ -2,11 +2,10 @@ import 'package:artelio/SIgn-in%20page/screens/sign_in_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:slider_button/slider_button.dart';
-import '../../routes/routes.dart';
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
 import '../../utils/sizes.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});

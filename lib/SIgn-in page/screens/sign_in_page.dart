@@ -1,6 +1,5 @@
 import 'package:artelio/SIgn-in%20page/screens/sign_up_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../../HomeScreen/screens/homeScreen.dart';
 import '../../common/buttons.dart';

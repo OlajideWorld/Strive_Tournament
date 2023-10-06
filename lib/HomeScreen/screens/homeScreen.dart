@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 
-import 'package:artelio/HomeScreen/components/bottomsheet.dart';
 import 'package:artelio/HomeScreen/controller/homecontroller.dart';
 import 'package:artelio/HomeScreen/screens/notification_page.dart';
 import 'package:flutter/material.dart';

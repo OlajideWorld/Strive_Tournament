@@ -1,9 +1,6 @@
 import 'package:artelio/HomeScreen/screens/verify_number.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../common/buttons.dart';
-import '../../common/textField.dart';
 import '../../common/textstyle.dart';
 import '../../utils/colors.dart';
 import '../../utils/sizes.dart';

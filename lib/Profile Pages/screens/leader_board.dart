@@ -1,5 +1,4 @@
 import 'package:artelio/Profile%20Pages/components/leader_board_card_widget.dart';
-import 'package:artelio/Profile%20Pages/components/leader_board_details_widget.dart';
 import 'package:artelio/common/textstyle.dart';
 import 'package:artelio/utils/colors.dart';
 import 'package:flutter/material.dart';

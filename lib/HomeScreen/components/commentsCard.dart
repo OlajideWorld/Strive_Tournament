@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../../utils/colors.dart';
 
 commentCards(BuildContext context, String image, String inputText) {
-  final height = MediaQuery.of(context).size.height;
   final width = MediaQuery.of(context).size.width;
   return SizedBox(
     height: heightSize(140),
